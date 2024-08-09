@@ -1,0 +1,76 @@
+
+# I. Buổi 1;
+ 1. - Giới thiệu về Vue.js
+    + Đây là 1 framework frontend JavaScript dùng để xây dựng giao diện người dùng.
+    + Vue.js rất phù hợp cho việc phát triển ứng dụng web đơn trang (SPA - Single Page Application).
+    + Vue.js được thiết kế dễ tiếp cận, linh hoạt và dễ mở rộng.
+
+ 2. - Tại sao nên dùng Vue.js
+    + Dễ học: Vue.js có cấu trúc đơn giản và dễ tiếp cận, phù hợp với người mới bắt dầu.
+    + Hiệu suất cao: Vue.js có hiệu suất nhanh nhờ vào các cơ chế reactivity (phản ứng dữ liệu) thông minh.
+    + Cộng đồng lớn: Vue.js có cộng đồng lớn, tài liệu phong phú.
+
+ 3. - Cài đặt môi trường phát triển Vue.js, cấu hình ban đầu:
+    3.1 - Node.js và npm:
+        + Vue.js yêu cầu Node.js để chạy và npm để quản lý các gói cài đặt.
+        + Tải và cài đặt Node.js tại `https://nodejs.org/en`.
+        + Sau khi tải và cài đặt, mở Terminal và kiểm tra bằng 2 lệnh sau nếu hiện tên phiên bản là thành công:
+            node -v
+            npm -v
+    3.2 - Cài đặt Vue CLI: npm install -g @vue/cli
+        + Vue CLI là công cụ dòng lệnh giúp tạo và quản lý dự án Vue.js dễ dàng.
+        + Cài Vue CLI bằng npm:
+            npm install -g @vue/cli
+        + Kiểm tra phiên bản Vue CLI
+            vue --version
+
+4. - Tạo dự án Vue.js đầu tiên.
+    + Mở Terminal và chạy lệnh để tạo 1 dự án mới.
+        vue create [tên dự án]
+    + Lúc này sẽ được yêu cầu chọn cấu hình mặc định hoặc tùy chỉnh.
+    + Để đơn giản, chọn cấu hình mặc định (default).
+    + Sau khi tạo thành công sẽ thấy cấu thư mục dự án được gen ra tại thư mục đang ở
+    + Di chuyển đến thư mục dự án:
+        cd [tên dự án vừa tạo]
+    + Chạy dự án để xem kết qủa:
+        npm run serve
+
+
+Cấu trúc của 1 dự án Vue.js điển hình bao gồm các thư mục
+ - `node_modules/`: Chứa các thư viện và module phụ thuộc của dự án.
+    + Thư mục này được khởi tạo khi chạy lệnh `npm install` hoặc `yarn install`.
+
+ - `public/`:
+    + Chứa các tệp tin tĩnh như hình ảnh, favicon, và `index.html`.
+    + Đây là nơi đặt các tài nguyên không càn biên dịch bới Webpack.
+
+ -  `src/`:
+    - Đây là thư mục quan trọng nhất, chứa mã nguồn chính của dự án:
+        - `assets/`:
+            + Chứa các tài nguyên như hình ảnh, font, hoặc các tệp tin CSS sử dụng trong các componet.
+        - `components/`:
+            + Nơi chứa các component Vue
+            + Một component thường là một phần tử giao diện nhỏ có thể tái sử dụng.
+        - `views/`:
+            + Chứa các trang (views) trong ứng dụng.
+            + Mỗi tệp tin trong thư mục này thường tương ứng với một route (đường dẫn) trong ứng dụng.
+        - `router/`:
+            + Chứa các cấu hình route cho ứng dụng.
+            + Đây là nơi định nghĩa các đường dẫn URL tương ứng với các component hoặc view.
+        - `store/`:
+            + Chứa các module Vuex để quản lý trạng thái ứng dụng(Nếu sử dụng Vuex).
+        - `App.vue`:
+            + Component gốc của ứng dng.
+            + Mọi thứ sẽ được render bên trong component này.
+        - `main.js` hoặc `main.ts`:
+            + Điểm khởi đầu của ứng dụng.
+            + Đây là nơi khởi tạo Vue instance và liên kết với `index.html`.
+
+ - `package.json`:
+    + Tệp tin quản lý các dependency và script của dự án.
+
+ - `babel.config.js`:
+    + Cấu hình Babel cho việc biên dịch mã ES6+ xuống ES5.
+ - `vue.config.js`:
+    + Tệp cấu hình cho Vue CLI.
+    + Cho phép tùy chỉnh cấu hình Webpack mà không cần eject dự án.
